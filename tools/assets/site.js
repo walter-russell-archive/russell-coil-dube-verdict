@@ -7,9 +7,10 @@
 
   function paint() {
     var dark = root.dataset.theme === "dark";
-    button.textContent = dark ? "Light" : "Dark";
+    var label = dark ? "Switch to the light theme" : "Switch to the dark theme";
     button.setAttribute("aria-pressed", dark ? "true" : "false");
-    button.setAttribute("aria-label", dark ? "Switch to the light theme" : "Switch to the dark theme");
+    button.setAttribute("aria-label", label);
+    button.setAttribute("title", label);
   }
 
   button.addEventListener("click", function () {
