@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" font-family="Helvetica, Arial, sans-serif">
+  <title>Pull-test fixture arrangement after FIG 3, journal page 91</title>
+  <rect width="900" height="1100" fill="#ffffff"/>
+
+  <text x="450" y="40" font-size="21" text-anchor="middle" fill="#000">PULL-TEST FIXTURE ARRANGEMENT (AFTER &#8220;FIG,3&#8221;, j91 / PDF 94)</text>
+
+  <!-- vertical axis centerline -->
+  <line x1="450" y1="90" x2="450" y2="1005" stroke="#888" stroke-width="0.8" stroke-dasharray="14 4 3 4"/>
+
+  <!-- fixed ceiling anchor -->
+  <line x1="300" y1="95" x2="600" y2="95" stroke="#000" stroke-width="2.5"/>
+  <g stroke="#000" stroke-width="1.4">
+    <line x1="310" y1="95" x2="290" y2="75"/><line x1="335" y1="95" x2="315" y2="75"/>
+    <line x1="360" y1="95" x2="340" y2="75"/><line x1="385" y1="95" x2="365" y2="75"/>
+    <line x1="410" y1="95" x2="390" y2="75"/><line x1="435" y1="95" x2="415" y2="75"/>
+    <line x1="460" y1="95" x2="440" y2="75"/><line x1="485" y1="95" x2="465" y2="75"/>
+    <line x1="510" y1="95" x2="490" y2="75"/><line x1="535" y1="95" x2="515" y2="75"/>
+    <line x1="560" y1="95" x2="540" y2="75"/><line x1="585" y1="95" x2="565" y2="75"/>
+  </g>
+  <text x="625" y="86" font-size="15" fill="#000">FIXED ANCHOR</text>
+
+  <!-- upper suspension link -->
+  <g stroke="#000" stroke-width="2" fill="none">
+    <line x1="450" y1="95" x2="450" y2="133"/>
+    <circle cx="450" cy="145" r="12"/>
+    <circle cx="450" cy="167" r="12"/>
+    <line x1="450" y1="179" x2="450" y2="200"/>
+  </g>
+
+  <!-- upper coil unit (section symbol: winding blocks flanking core) -->
+  <g stroke="#000" stroke-width="2" fill="none">
+    <rect x="340" y="200" width="220" height="12"/>
+    <rect x="340" y="212" width="80" height="156"/>
+    <line x1="340" y1="212" x2="420" y2="368"/><line x1="420" y1="212" x2="340" y2="368"/>
+    <rect x="480" y="212" width="80" height="156"/>
+    <line x1="480" y1="212" x2="560" y2="368"/><line x1="560" y1="212" x2="480" y2="368"/>
+    <line x1="420" y1="212" x2="420" y2="368"/>
+    <line x1="480" y1="212" x2="480" y2="368"/>
+    <rect x="340" y="368" width="220" height="12"/>
+  </g>
+
+  <!-- gap -->
+  <g stroke="#000" stroke-width="1.4">
+    <line x1="630" y1="400" x2="572" y2="400"/>
+    <path d="M 572 400 l 12 -5 l 0 10 z" fill="#000"/>
+  </g>
+  <text x="640" y="406" font-size="17" font-weight="bold" fill="#000">GAP</text>
+  <text x="640" y="428" font-size="13" fill="#333">(set between pole faces,</text>
+  <text x="640" y="445" font-size="13" fill="#333">0 to .040 in)</text>
+
+  <!-- lower coil unit -->
+  <g stroke="#000" stroke-width="2" fill="none">
+    <rect x="340" y="420" width="220" height="12"/>
+    <rect x="340" y="432" width="80" height="156"/>
+    <line x1="340" y1="432" x2="420" y2="588"/><line x1="420" y1="432" x2="340" y2="588"/>
+    <rect x="480" y="432" width="80" height="156"/>
+    <line x1="480" y1="432" x2="560" y2="588"/><line x1="560" y1="432" x2="480" y2="588"/>
+    <line x1="420" y1="432" x2="420" y2="588"/>
+    <line x1="480" y1="432" x2="480" y2="588"/>
+    <rect x="340" y="588" width="220" height="12"/>
+  </g>
+
+  <!-- COILS label with arrows to both units -->
+  <text x="105" y="398" font-size="17" font-weight="bold" fill="#000">COILS</text>
+  <g stroke="#000" stroke-width="1.4" fill="#000">
+    <line x1="172" y1="388" x2="332" y2="294"/>
+    <path d="M 338 290 l -13 2 l 6 10 z"/>
+    <line x1="172" y1="402" x2="332" y2="506"/>
+    <path d="M 338 510 l -13 -2 l 6 -10 z"/>
+  </g>
+
+  <!-- lower link to scale -->
+  <g stroke="#000" stroke-width="2" fill="none">
+    <line x1="450" y1="600" x2="450" y2="625"/>
+    <circle cx="450" cy="637" r="12"/>
+    <circle cx="450" cy="659" r="12"/>
+    <line x1="450" y1="671" x2="450" y2="692"/>
+  </g>
+
+  <!-- spring scale -->
+  <rect x="410" y="692" width="80" height="240" fill="#ffffff" stroke="#000" stroke-width="2"/>
+  <g stroke="#000" stroke-width="1.1">
+    <line x1="418" y1="712" x2="440" y2="712"/><line x1="418" y1="728" x2="432" y2="728"/>
+    <line x1="418" y1="744" x2="440" y2="744"/><line x1="418" y1="760" x2="432" y2="760"/>
+    <line x1="418" y1="776" x2="440" y2="776"/><line x1="418" y1="792" x2="432" y2="792"/>
+    <line x1="418" y1="808" x2="440" y2="808"/><line x1="418" y1="824" x2="432" y2="824"/>
+    <line x1="418" y1="840" x2="440" y2="840"/><line x1="418" y1="856" x2="432" y2="856"/>
+    <line x1="418" y1="872" x2="440" y2="872"/><line x1="418" y1="888" x2="432" y2="888"/>
+    <line x1="418" y1="904" x2="440" y2="904"/><line x1="418" y1="920" x2="432" y2="920"/>
+  </g>
+  <path d="M 482 806 l -14 -6 l 0 12 z" fill="#000"/>
+  <line x1="452" y1="806" x2="468" y2="806" stroke="#000" stroke-width="1.4"/>
+  <text x="510" y="812" font-size="15" fill="#000">SPRING SCALE</text>
+  <text x="510" y="832" font-size="13" fill="#333">(graduated; breakaway</text>
+  <text x="510" y="849" font-size="13" fill="#333">force read here)</text>
+
+  <!-- pull arrow -->
+  <g stroke="#000" stroke-width="2.5">
+    <line x1="450" y1="932" x2="450" y2="985"/>
+  </g>
+  <path d="M 450 1010 l -10 -24 l 20 0 z" fill="#000"/>
+  <text x="450" y="1042" font-size="18" text-anchor="middle" font-weight="bold" fill="#000">PULL</text>
+
+  <!-- caption -->
+  <g font-size="14" fill="#333">
+    <text x="60" y="1068">Two identical coil units axially in line; upper unit hung from a fixed anchor; controlled gap between pole faces;</text>
+    <text x="60" y="1087">breakaway force read on the spring scale. Energized at 24 VDC (the Fig. 4 &#8220;TEST SETUP&#8221; inset adds V and I meters).</text>
+  </g>
+</svg>

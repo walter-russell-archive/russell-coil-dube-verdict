@@ -13,10 +13,14 @@ layer. No search engine could read the scans, and the episode stayed invisible f
 almost thirty years. This repository transcribes every document verbatim and puts the
 text where readers and search engines can reach it.
 
-## Read the essay
+## Read it
 
-**[essay/the-dube-verdict.md](essay/the-dube-verdict.md)** — the full annotated
-account: the test, the prediction, the concession, and the burial.
+**Web:** https://walter-russell-archive.github.io/russell-coil-dube-verdict/ — the essay
+typeset, every document beside its page scan, the drawings, and the provenance chain.
+A canonical address at walterrussellarchive.org will follow.
+
+**In this repository:** [essay/the-dube-verdict.md](essay/the-dube-verdict.md) — the full
+annotated account: the test, the prediction, the concession, and the burial.
 
 ## The evidence chain
 
@@ -38,7 +42,11 @@ Every claim in the essay is checkable inside this repository:
 - `sources/` — the two complete *Fulcrum* issue scans (V4N3 Oct 1996, V5N1 May 1997)
   and page renders at 100–300 dpi.
 - `verification/` — independent biographical verification of John E. Dube and
-  Russell Maguire, with negative findings stated.
+  Russell Maguire, with negative findings stated. `fulcrum_mirror_checksums.tsv`
+  carries the SHA256 of all 21 mirrored issues.
+- `docs/` — the generated website. It is build output: edit the Markdown above, then
+  run `python3 tools/build_site.py` (Pillow is the only dependency, and only for the
+  page images).
 
 ## Replicate the test
 
