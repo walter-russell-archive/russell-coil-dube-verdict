@@ -432,17 +432,33 @@ def page(
     current: str,
     body: str,
     base: str,
-    og_image: str = "scans/v4n3_d-23.jpg",
+    og_image: str = "assets/og-card.png",
+    noindex: bool = False,
 ) -> str:
+    # The 404 page (the only noindex page) is served at any missing URL, at any
+    # depth, so every internal reference on it must be absolute.
+    prefix = f"{base}/" if noindex else ""
     nav = "\n".join(
         '      <a href="{href}"{cur}>{label}</a>'.format(
-            href=href, label=label, cur=' aria-current="page"' if href == current else ""
+            href=prefix + href, label=label, cur=' aria-current="page"' if href == current else ""
         )
         for href, label in NAV
     )
     esc_title = html.escape(title, quote=True)
     esc_desc = html.escape(description, quote=True)
     canonical = f"{base}/{current}" if current != "index.html" else f"{base}/"
+    if noindex:
+        head_meta = '<meta name="robots" content="noindex">'
+    else:
+        head_meta = f"""<link rel="canonical" href="{canonical}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{esc_title}">
+<meta property="og:description" content="{esc_desc}">
+<meta property="og:url" content="{canonical}">
+<meta property="og:image" content="{base}/{og_image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">"""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -451,20 +467,14 @@ def page(
 <meta name="color-scheme" content="light dark">
 <title>{esc_title}</title>
 <meta name="description" content="{esc_desc}">
-<link rel="canonical" href="{canonical}">
-<meta property="og:type" content="article">
-<meta property="og:title" content="{esc_title}">
-<meta property="og:description" content="{esc_desc}">
-<meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{base}/{og_image}">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="assets/site.css">
+{head_meta}
+<link rel="stylesheet" href="{prefix}assets/site.css">
 <script>document.documentElement.classList.add("js");try{{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}}catch(e){{}}</script>
 </head>
 <body>
 <header class="masthead">
   <div class="masthead-inner">
-    <a class="wordmark" href="index.html">Walter Russell Archive</a>
+    <a class="wordmark" href="{prefix}index.html">Walter Russell Archive</a>
     <nav>
 {nav}
       <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false"
@@ -492,7 +502,7 @@ def page(
   </div>
 </footer>
 <div id="lightbox" role="dialog" aria-label="Page scan"><img alt=""><div class="lb-caption"></div></div>
-<script src="assets/site.js"></script>
+<script src="{prefix}assets/site.js"></script>
 </body>
 </html>
 """
@@ -1011,12 +1021,20 @@ The build specification is complete enough to repeat the 1958 test.</p>
 def mirror_table() -> str:
     tsv = (ROOT / "verification" / "fulcrum_mirror_checksums.tsv").read_text(encoding="utf-8")
     rows = [line.split("\t") for line in tsv.strip().split("\n")[1:]]
-    out = ['<div class="table-wrap"><table>', "<thead><tr><th>Issue file</th><th class=\"num\">Bytes</th><th class=\"num\">Pages</th><th>SHA256</th><th>Source</th></tr></thead><tbody>"]
+    ocr_tsv = (ROOT / "verification" / "fulcrum_mirror_ocr_checksums.tsv").read_text(encoding="utf-8")
+    ocr_names = {line.split("\t")[0] for line in ocr_tsv.strip().split("\n")[1:]}
+    dl = IA_ITEM.replace("/details/", "/download/")
+    out = ['<div class="table-wrap"><table>', "<thead><tr><th>Issue file</th><th class=\"num\">Bytes</th><th class=\"num\">Pages</th><th>SHA256</th><th>Source</th><th>Searchable copy</th></tr></thead><tbody>"]
     for name, size, pages, digest, source in rows:
+        stem = name.removesuffix(".pdf")
+        if f"{stem}_ocr.pdf" not in ocr_names:
+            raise SystemExit(f"no OCR checksum entry for {name}")
         out.append(
             f"<tr><td><code>{name}</code></td><td class=\"num\">{int(size):,}</td>"
             f"<td class=\"num\">{pages}</td><td class=\"hash\">{digest}</td>"
-            f"<td>{html.escape(source)}</td></tr>"
+            f"<td>{html.escape(source)}</td>"
+            f"<td><a href=\"{dl}/{stem}_ocr.pdf\" rel=\"noopener\">PDF</a> &middot; "
+            f"<a href=\"{dl}/{stem}_ocr.txt\" rel=\"noopener\">text</a></td></tr>"
         )
     out.append("</tbody></table></div>")
     return "".join(out)
@@ -1067,7 +1085,8 @@ def build_provenance(base: str) -> str:
    copy of V4N3 as byte-identical to the Wayback capture.
 6. **This repository and the Internet Archive mirror.** Both issues are in `sources/` here. All
    21 issues (1992&ndash;1998) are mirrored as an
-   [Internet Archive item]({IA_ITEM}) with checksums.
+   [Internet Archive item]({IA_ITEM}) with checksums, in the original form and in a searchable
+   copy.
 
 ### Cautions
 
@@ -1148,6 +1167,13 @@ repository.</p>
 <p>All 21 issues of <em>Fulcrum</em> (April 1992 to December 1998) are mirrored, with checksums, as
 one <a href="{IA_ITEM}" rel="noopener">Internet Archive item</a>. The full SHA256 list is in
 <a href="{BLOB}/verification/fulcrum_mirror_checksums.tsv" rel="noopener"><code>verification/fulcrum_mirror_checksums.tsv</code></a>.</p>
+<p>The mirror is searchable. Each issue has a second copy with the suffix <code>_ocr.pdf</code>:
+the same pages, with a machine-read text layer added, and the plain text of that layer beside it
+as <code>_ocr.txt</code>. The original files are unchanged, so every checksum below still
+verifies. The text layer is for search. For quotation, the transcripts on this site stay the text
+of record, because the machine reading has small errors on faint typescript. Checksums for the
+searchable set are in
+<a href="{BLOB}/verification/fulcrum_mirror_ocr_checksums.tsv" rel="noopener"><code>verification/fulcrum_mirror_ocr_checksums.tsv</code></a>.</p>
 </div>
 <div class="prose-wide">
 {mirror_table()}
@@ -1187,6 +1213,28 @@ one <a href="{IA_ITEM}" rel="noopener">Internet Archive item</a>. The full SHA25
     )
 
 
+def build_notfound(base: str) -> str:
+    body_html = f"""<div class="title-block">
+  <p class="kicker">404</p>
+  <h1>Page not found</h1>
+  <p class="subtitle">There is no page at this address.</p>
+  <div class="toolbar"><a href="{base}/">The essay</a><a href="{base}/evidence.html">The documents</a><a href="{base}/schematics.html">The drawings</a><a href="{base}/provenance.html">Provenance</a></div>
+</div>
+<div class="prose">
+<p>Possibly the page moved, or the link has an error. The four pages above hold all the content of
+this site. If a link on this site sent you here, please tell
+<a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
+</div>"""
+    return page(
+        title="Page not found — Walter Russell Archive",
+        description="There is no page at this address.",
+        current="404.html",
+        body=body_html,
+        base=base,
+        noindex=True,
+    )
+
+
 # --------------------------------------------------------------------------
 # driver
 # --------------------------------------------------------------------------
@@ -1212,7 +1260,7 @@ def main() -> int:
     (OUT / "assets").mkdir(exist_ok=True)
     (OUT / "schematics").mkdir(exist_ok=True)
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
-    for asset in ("site.css", "site.js"):
+    for asset in ("site.css", "site.js", "og-card.png"):
         shutil.copyfile(ASSETS / asset, OUT / "assets" / asset)
 
     # A custom base means a custom domain: Pages needs the CNAME file in docs/.
@@ -1232,6 +1280,7 @@ def main() -> int:
     write(OUT / "evidence.html", build_evidence(base))
     write(OUT / "schematics.html", build_schematics(base))
     write(OUT / "provenance.html", build_provenance(base))
+    write(OUT / "404.html", build_notfound(base))
 
     urls = "".join(
         f"  <url><loc>{base}/{'' if href == 'index.html' else href}</loc></url>\n"
@@ -1245,7 +1294,7 @@ def main() -> int:
     )
     write(OUT / "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n")
 
-    for name in ("index.html", "evidence.html", "schematics.html", "provenance.html"):
+    for name in ("index.html", "evidence.html", "schematics.html", "provenance.html", "404.html"):
         size = (OUT / name).stat().st_size
         print(f"{name}: {size:,} bytes")
     return 0
