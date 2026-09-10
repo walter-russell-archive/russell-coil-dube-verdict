@@ -1,5 +1,7 @@
 /* The Dube Verdict — static site styles. No framework, no web fonts. */
 
+/* Light is the default. Dark applies only when a reader asks for it, through the
+   masthead toggle, which stores the choice in localStorage. */
 :root {
   --bg: #fbfaf7;
   --bg-sunk: #f2efe8;
@@ -9,18 +11,18 @@
   --accent: #7a2e1d;
   --accent-soft: #f0e5df;
   --measure: 36rem;
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #16171a;
-    --bg-sunk: #1e2024;
-    --ink: #e7e4dd;
-    --ink-soft: #a9a49a;
-    --rule: #363a40;
-    --accent: #e0866c;
-    --accent-soft: #2a2320;
-  }
+html[data-theme="dark"] {
+  --bg: #16171a;
+  --bg-sunk: #1e2024;
+  --ink: #e7e4dd;
+  --ink-soft: #a9a49a;
+  --rule: #363a40;
+  --accent: #e0866c;
+  --accent-soft: #2a2320;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -80,6 +82,24 @@ u.src-underline { text-decoration: underline; text-underline-offset: 2px; }
   color: var(--ink-soft);
 }
 .masthead nav a[aria-current="page"] { color: var(--ink); border-bottom: 2px solid var(--accent); }
+
+/* The toggle needs a script to work, so it appears only when scripting runs. */
+.theme-toggle { display: none; }
+html.js .theme-toggle { display: inline-block; }
+.theme-toggle {
+  font: inherit;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 0.18rem 0.5rem;
+  cursor: pointer;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 main { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem 5rem; }
 
@@ -381,6 +401,17 @@ footer.site .footer-inner { max-width: 62rem; margin: 0 auto; display: grid; gap
 }
 
 @media print {
+  /* Print on paper, whichever theme the reader is using on screen. */
+  :root, html[data-theme="dark"] {
+    --bg: #fff;
+    --bg-sunk: #f4f4f4;
+    --ink: #000;
+    --ink-soft: #333;
+    --rule: #bbb;
+    --accent: #000;
+    --accent-soft: transparent;
+    color-scheme: light;
+  }
   .masthead, #lightbox, .toolbar { display: none; }
   body { background: #fff; color: #000; font-size: 11pt; }
   .doc-body { grid-template-columns: 1fr; }

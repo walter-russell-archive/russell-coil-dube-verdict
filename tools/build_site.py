@@ -448,6 +448,7 @@ def page(
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>{esc_title}</title>
 <meta name="description" content="{esc_desc}">
 <link rel="canonical" href="{canonical}">
@@ -458,6 +459,7 @@ def page(
 <meta property="og:image" content="{base}/{og_image}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add("js");try{{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}}catch(e){{}}</script>
 </head>
 <body>
 <header class="masthead">
@@ -465,6 +467,7 @@ def page(
     <a class="wordmark" href="index.html">Walter Russell Archive</a>
     <nav>
 {nav}
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark</button>
     </nav>
   </div>
 </header>
