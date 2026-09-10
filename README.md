@@ -56,8 +56,8 @@ The scans come from Internet Archive Wayback captures of philosophy.org (capture
 the same files through personal-account SharePoint links. The SharePoint copy of
 V4N3 verifies byte-identical (SHA256 `4ff27b21…`) to the Wayback capture. Full
 details are in the essay's Sources Appendix. A complete mirror of all 21 *Fulcrum*
-issues (1992–1998) is prepared for upload to the Internet Archive. This README will
-link to it after upload.
+issues (1992–1998), with SHA256 checksums, is on the Internet Archive:
+https://archive.org/details/fulcrum-science-journal-usp-1992-1998
 
 ## What this repository is not
 
