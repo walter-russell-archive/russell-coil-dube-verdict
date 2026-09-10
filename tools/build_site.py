@@ -32,7 +32,7 @@ REPO = "https://github.com/walter-russell-archive/russell-coil-dube-verdict"
 BLOB = REPO + "/blob/main"
 RAW = "https://raw.githubusercontent.com/walter-russell-archive/russell-coil-dube-verdict/main"
 IA_ITEM = "https://archive.org/details/fulcrum-science-journal-usp-1992-1998"
-DEFAULT_BASE = "https://walter-russell-archive.github.io/russell-coil-dube-verdict"
+DEFAULT_BASE = "https://walterrussellarchive.org"
 CONTACT = "contact@walterrussellarchive.org"
 
 PDFS = {
@@ -1207,6 +1207,13 @@ def main() -> int:
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     for asset in ("site.css", "site.js"):
         shutil.copyfile(ASSETS / asset, OUT / "assets" / asset)
+
+    # A custom base means a custom domain: Pages needs the CNAME file in docs/.
+    host = base.split("//", 1)[-1].split("/")[0]
+    if host.endswith(".github.io"):
+        (OUT / "CNAME").unlink(missing_ok=True)
+    else:
+        (OUT / "CNAME").write_text(host + "\n", encoding="utf-8")
 
     if args.skip_images:
         load_dims()

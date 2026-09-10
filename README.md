@@ -15,9 +15,8 @@ text where readers and search engines can reach it.
 
 ## Read it
 
-**Web:** https://walter-russell-archive.github.io/russell-coil-dube-verdict/ — the essay
-typeset, every document beside its page scan, the drawings, and the provenance chain.
-A canonical address at walterrussellarchive.org will follow.
+**Web:** https://walterrussellarchive.org — the essay typeset, every document beside
+its page scan, the drawings, and the provenance chain.
 
 **In this repository:** [essay/the-dube-verdict.md](essay/the-dube-verdict.md) — the full
 annotated account: the test, the prediction, the concession, and the burial.
