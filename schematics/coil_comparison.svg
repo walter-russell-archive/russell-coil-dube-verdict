@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 1000" font-family="Helvetica, Arial, sans-serif">
+  <title>Cross-section comparison: Russell step-diameter coil LO 8308-11 vs conventional solenoid LO 8308-12</title>
+  <defs>
+    <pattern id="iron" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#555555" stroke-width="1"/>
+    </pattern>
+    <pattern id="copper" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(-45)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#888888" stroke-width="0.8"/>
+    </pattern>
+  </defs>
+  <rect width="1450" height="1000" fill="#ffffff"/>
+
+  <text x="725" y="42" font-size="24" text-anchor="middle" fill="#000">COIL CROSS-SECTION COMPARISON &#8212; ALCO VALVE TEST UNITS, OCT 1958</text>
+  <text x="725" y="68" font-size="16" text-anchor="middle" fill="#333">(sections; all dimensions in inches, actual part size &#8212; source sheets drawn &#8220;2X SIZE&#8221;)</text>
+
+  <!-- ================== RUSSELL UNIT, axis x=430, equator y=560, 250 px/in ================== -->
+  <text x="430" y="118" font-size="19" text-anchor="middle" font-weight="bold" fill="#000">RUSSELL STEP-DIAMETER UNIT &#8212; LO 8308-11</text>
+  <text x="430" y="140" font-size="14" text-anchor="middle" fill="#333">core halves LO 8308-101 &#183; sleeve -102 &#183; buttons -103 &#183; coils -107/-108/-109</text>
+
+  <!-- sphere envelope -->
+  <circle cx="430" cy="560" r="281.25" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="10 8"/>
+
+  <!-- centerlines -->
+  <line x1="430" y1="205" x2="430" y2="915" stroke="#666" stroke-width="0.8" stroke-dasharray="14 4 3 4"/>
+  <line x1="115" y1="560" x2="740" y2="560" stroke="#666" stroke-width="0.8" stroke-dasharray="14 4 3 4"/>
+
+  <!-- stepped core (Armco ingot iron), two mirrored halves -->
+  <g fill="url(#iron)" stroke="#000" stroke-width="1.5">
+    <rect x="374.3" y="302.3" width="111.5" height="70.25"/>
+    <rect x="341.5" y="372.5" width="177" height="70.25"/>
+    <rect x="318.6" y="442.75" width="222.8" height="70.25"/>
+    <rect x="334.4" y="513" width="191.2" height="94"/>
+    <rect x="318.6" y="607" width="222.8" height="70.25"/>
+    <rect x="341.5" y="677.25" width="177" height="70.25"/>
+    <rect x="374.3" y="747.5" width="111.5" height="70.25"/>
+  </g>
+
+  <!-- steel core sleeve over butted spigots -->
+  <g fill="#ffffff" stroke="#000" stroke-width="1.5">
+    <rect x="322.5" y="521" width="11.6" height="78"/>
+    <rect x="525.9" y="521" width="11.6" height="78"/>
+  </g>
+
+  <!-- hex buttons, top and bottom -->
+  <g fill="url(#iron)" stroke="#000" stroke-width="1.5">
+    <rect x="351.9" y="232" width="156.25" height="70.3"/>
+    <rect x="351.9" y="817.75" width="156.25" height="70.3"/>
+  </g>
+  <g stroke="#000" stroke-width="0.9">
+    <line x1="395" y1="232" x2="395" y2="302.3"/><line x1="465" y1="232" x2="465" y2="302.3"/>
+    <line x1="395" y1="817.75" x2="395" y2="888.05"/><line x1="465" y1="817.75" x2="465" y2="888.05"/>
+  </g>
+  <!-- threaded studs (10-32 NF), dashed -->
+  <g fill="none" stroke="#000" stroke-width="1.2" stroke-dasharray="5 4">
+    <rect x="406.3" y="302.3" width="47.5" height="93.75"/>
+    <rect x="406.3" y="724" width="47.5" height="93.75"/>
+    <!-- .521 internal feature, placement interpretive -->
+    <rect x="364.9" y="400" width="130.2" height="320"/>
+  </g>
+
+  <!-- windings: six sections on epoxy/bakelite bobbin tubes -->
+  <g fill="#ffffff" stroke="#000" stroke-width="1">
+    <rect x="365" y="303.75" width="8" height="68.75"/><rect x="487" y="303.75" width="8" height="68.75"/>
+    <rect x="332.4" y="374" width="7.75" height="68.75"/><rect x="519.9" y="374" width="7.75" height="68.75"/>
+    <rect x="309" y="444.25" width="7.75" height="68.75"/><rect x="543.3" y="444.25" width="7.75" height="68.75"/>
+    <rect x="309" y="607" width="7.75" height="68.75"/><rect x="543.3" y="607" width="7.75" height="68.75"/>
+    <rect x="332.4" y="677.25" width="7.75" height="68.75"/><rect x="519.9" y="677.25" width="7.75" height="68.75"/>
+    <rect x="365" y="747.5" width="8" height="68.75"/><rect x="487" y="747.5" width="8" height="68.75"/>
+  </g>
+  <g fill="url(#copper)" stroke="#000" stroke-width="1.2">
+    <rect x="205" y="303.75" width="160" height="68.75"/><rect x="495" y="303.75" width="160" height="68.75"/>
+    <rect x="172.5" y="374" width="159.9" height="68.75"/><rect x="527.6" y="374" width="159.9" height="68.75"/>
+    <rect x="148.75" y="444.25" width="160.25" height="68.75"/><rect x="551" y="444.25" width="160.25" height="68.75"/>
+    <rect x="148.75" y="607" width="160.25" height="68.75"/><rect x="551" y="607" width="160.25" height="68.75"/>
+    <rect x="172.5" y="677.25" width="159.9" height="68.75"/><rect x="527.6" y="677.25" width="159.9" height="68.75"/>
+    <rect x="205" y="747.5" width="160" height="68.75"/><rect x="495" y="747.5" width="160" height="68.75"/>
+  </g>
+
+  <!-- left labels: wound diameters -->
+  <g font-size="16" fill="#000">
+    <text x="25" y="330">SM: WOUND TO 1.80 DIA</text>
+    <line x1="212" y1="325" x2="230" y2="335" stroke="#000" stroke-width="1.1"/>
+    <text x="25" y="402">MED: WOUND TO 2.06 DIA</text>
+    <line x1="222" y1="397" x2="200" y2="407" stroke="#000" stroke-width="1.1"/>
+    <text x="25" y="475">LG: WOUND TO 2.25 DIA</text>
+    <line x1="208" y1="470" x2="175" y2="478" stroke="#000" stroke-width="1.1"/>
+    <text x="25" y="790">SPHERE ENVELOPE 2&#188; DIA</text>
+    <line x1="215" y1="784" x2="238" y2="770" stroke="#000" stroke-width="1.1"/>
+  </g>
+
+  <!-- right labels: core features (kept clear of conventional unit at x>1000) -->
+  <g font-size="15" fill="#000">
+    <text x="745" y="250">BUTTON LO 8308-103, 5/8 HEX &#215; .281 (2 PL)</text>
+    <line x1="740" y1="245" x2="512" y2="262" stroke="#000" stroke-width="1.1"/>
+    <text x="745" y="285">10-32 NF THREAD &#215; .375 (BOTH POLES)</text>
+    <line x1="740" y1="280" x2="456" y2="330" stroke="#000" stroke-width="1.1"/>
+    <text x="745" y="330">.446 DIA LAND &#215; .281</text>
+    <line x1="740" y1="325" x2="488" y2="335" stroke="#000" stroke-width="1.1"/>
+    <text x="745" y="398">.708 DIA LAND &#215; .281</text>
+    <line x1="740" y1="393" x2="521" y2="400" stroke="#000" stroke-width="1.1"/>
+    <text x="745" y="466">.891 DIA LAND &#215; .281</text>
+    <line x1="740" y1="461" x2="544" y2="468" stroke="#000" stroke-width="1.1"/>
+    <text x="745" y="520">.765&#177;.001 SPIGOT &#215; .188 PRESS FIT</text>
+    <line x1="740" y1="515" x2="528" y2="517" stroke="#000" stroke-width="1.1"/>
+    <text x="745" y="566">SLEEVE LO 8308-102, .312 LG, STEEL</text>
+    <line x1="740" y1="561" x2="540" y2="560" stroke="#000" stroke-width="1.1"/>
+    <text x="745" y="622">.521 DIA [interpretive]</text>
+    <line x1="740" y1="617" x2="497" y2="620" stroke="#000" stroke-width="1.1"/>
+  </g>
+
+  <!-- ================== CONVENTIONAL UNIT, axis x=1150, center y=560 ================== -->
+  <text x="1150" y="118" font-size="19" text-anchor="middle" font-weight="bold" fill="#000">CONVENTIONAL UNIT &#8212; LO 8308-12</text>
+  <text x="1150" y="140" font-size="14" text-anchor="middle" fill="#333">core LO 8307-120 [prefix &#8220;7&#8221; as written] &#183; sleeve -121 &#183; coil -122</text>
+
+  <line x1="1150" y1="300" x2="1150" y2="800" stroke="#666" stroke-width="0.8" stroke-dasharray="14 4 3 4"/>
+
+  <!-- straight core -->
+  <rect x="1094.3" y="349" width="111.5" height="422" fill="url(#iron)" stroke="#000" stroke-width="1.5"/>
+  <!-- taps both ends -->
+  <g fill="none" stroke="#000" stroke-width="1.2" stroke-dasharray="5 4">
+    <rect x="1126.3" y="349" width="47.5" height="93.75"/>
+    <rect x="1126.3" y="677.25" width="47.5" height="93.75"/>
+  </g>
+  <!-- epoxy sleeve -->
+  <g fill="#ffffff" stroke="#000" stroke-width="1.2">
+    <rect x="1085" y="356.9" width="8" height="406.2"/>
+    <rect x="1207" y="356.9" width="8" height="406.2"/>
+  </g>
+  <!-- winding, outer diameter not dimensioned in source: outer edge dashed -->
+  <g fill="url(#copper)" stroke="none">
+    <rect x="1000" y="372.5" width="85" height="375"/>
+    <rect x="1215" y="372.5" width="85" height="375"/>
+  </g>
+  <g stroke="#000" stroke-width="1.2" fill="none">
+    <path d="M 1085 372.5 L 1300 372.5 M 1085 747.5 L 1300 747.5"/>
+    <path d="M 1300 372.5 L 1300 747.5" stroke-dasharray="7 5"/>
+    <path d="M 1085 372.5 L 1000 372.5 M 1085 747.5 L 1000 747.5"/>
+    <path d="M 1000 372.5 L 1000 747.5" stroke-dasharray="7 5"/>
+  </g>
+
+  <!-- dimensions -->
+  <g stroke="#000" stroke-width="1" fill="none">
+    <!-- sleeve length 1.625, x=1340 -->
+    <line x1="1218" y1="356.9" x2="1350" y2="356.9"/><line x1="1218" y1="763.1" x2="1350" y2="763.1"/>
+    <line x1="1340" y1="356.9" x2="1340" y2="763.1"/>
+    <path d="M 1340 356.9 l -4 10 l 8 0 z M 1340 763.1 l -4 -10 l 8 0 z" fill="#000"/>
+    <!-- core length 1.688, x=1395 -->
+    <line x1="1208" y1="349" x2="1405" y2="349"/><line x1="1208" y1="771" x2="1405" y2="771"/>
+    <line x1="1395" y1="349" x2="1395" y2="771"/>
+    <path d="M 1395 349 l -4 10 l 8 0 z M 1395 771 l -4 -10 l 8 0 z" fill="#000"/>
+  </g>
+  <g font-size="15" fill="#000">
+    <text x="1332" y="560" text-anchor="middle" transform="rotate(-90 1332 560)">1.625 (SLEEVE)</text>
+    <text x="1387" y="560" text-anchor="middle" transform="rotate(-90 1387 560)">1.688 (CORE)</text>
+  </g>
+  <g font-size="16" fill="#000">
+    <text x="1150" y="320" text-anchor="middle">CORE .446 DIA &#215; 1.688 &#8212; ARMCO INGOT IRON</text>
+    <line x1="1150" y1="326" x2="1150" y2="347" stroke="#000" stroke-width="1.1"/>
+    <text x="1310" y="330" font-size="15">.062 BOTH ENDS</text>
+    <line x1="1305" y1="333" x2="1212" y2="359" stroke="#000" stroke-width="1.1"/>
+    <text x="1150" y="812" text-anchor="middle">SLEEVE LO 8308-121: .456 ID / .520 OD, EPOXY</text>
+    <line x1="1105" y1="797" x2="1089" y2="765" stroke="#000" stroke-width="1.1"/>
+    <text x="1150" y="843" text-anchor="middle" font-size="15">10-32 NF TAP &#215; .375 PERFECT THREAD, BOTH ENDS</text>
+    <line x1="1150" y1="828" x2="1150" y2="773" stroke="#000" stroke-width="1.1"/>
+    <text x="1130" y="885" text-anchor="middle" font-size="15" fill="#333">WINDING #30 BONDEZE &#8212; WOUND OD NOT</text>
+    <text x="1130" y="905" text-anchor="middle" font-size="15" fill="#333">DIMENSIONED IN SOURCE (equal wire quantity to</text>
+    <text x="1130" y="925" text-anchor="middle" font-size="15" fill="#333">Russell set &#8212; &#8220;CHECK WITH TILNEY&#8221;)</text>
+    <line x1="1250" y1="868" x2="1258" y2="752" stroke="#000" stroke-width="1.1"/>
+  </g>
+
+  <!-- scale bar -->
+  <g stroke="#000" stroke-width="2">
+    <line x1="330" y1="925" x2="580" y2="925"/>
+    <line x1="330" y1="918" x2="330" y2="932"/><line x1="455" y1="920" x2="455" y2="930"/><line x1="580" y1="918" x2="580" y2="932"/>
+  </g>
+  <g font-size="14" fill="#000"><text x="324" y="948">0</text><text x="440" y="948">&#189;</text><text x="560" y="948">1 INCH</text></g>
+
+  <!-- footer -->
+  <g font-size="13.5" fill="#333">
+    <text x="40" y="968">Dimensions from the Tilney sheet set, Fulcrum V5N1 j93&#8211;j106 / PDF 96&#8211;109. Bobbins .275 LG: LO 8308-104 epoxy (.456 ID/.520 OD), -105 bakelite (.781 OD &#215; .031 wall), -106 bakelite (.968 OD &#215; .031 wall);</text>
+    <text x="40" y="986">six sections #30 Bondeze, &#8776;500 turns each. Conventional winding length &#8776;1.500 [derived: 1.625 &#8722; 2&#215;.062]. Axial mapping on LO 8308-101 reconciled as three .281 lands (=.843) + .188 spigot (.469=.281+.188); leaders</text>
+    <text x="40" y="1004" transform="translate(0,-8)">overlap in the freehand source, so this mapping and the .521 DIA feature remain flagged as interpretive (see README_schematics.md).</text>
+  </g>
+</svg>

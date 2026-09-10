@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 880" font-family="Helvetica, Arial, sans-serif">
+  <title>Test wiring of the 1958 Alco Valve coil comparison, conventional vs Russell step-diameter</title>
+  <rect width="1300" height="880" fill="#ffffff"/>
+
+  <text x="650" y="44" font-size="24" text-anchor="middle" fill="#000">TEST WIRING (AFTER FIGS. 1&#8211;2, j89 &amp; j91) &#8212; TWO-UNIT SETS ACROSS 24 VDC</text>
+
+  <!-- ================= LEFT PANEL: CONVENTIONAL ================= -->
+  <rect x="30" y="70" width="590" height="560" fill="none" stroke="#000" stroke-width="1.2"/>
+  <text x="325" y="102" font-size="19" text-anchor="middle" font-weight="bold" fill="#000">CONVENTIONAL &#8220;STANDARD&#8221; SET &#8212; LO 8308-12</text>
+
+  <!-- buses -->
+  <g stroke="#000" stroke-width="2" fill="none">
+    <line x1="110" y1="210" x2="560" y2="210"/>
+    <line x1="110" y1="620" x2="560" y2="620"/>
+    <!-- supply wire with battery -->
+    <line x1="110" y1="210" x2="110" y2="398"/>
+    <line x1="110" y1="428" x2="110" y2="620"/>
+    <line x1="88" y1="404" x2="132" y2="404"/>
+    <line x1="98" y1="422" x2="122" y2="422" stroke-width="5"/>
+    <!-- unit branches -->
+    <line x1="300" y1="210" x2="300" y2="375"/>
+    <line x1="300" y1="455" x2="300" y2="620"/>
+    <line x1="460" y1="210" x2="460" y2="375"/>
+    <line x1="460" y1="455" x2="460" y2="620"/>
+  </g>
+  <text x="76" y="410" font-size="18" fill="#000">+</text>
+  <text x="36" y="452" font-size="18" fill="#000">24 VDC</text>
+
+  <!-- coil symbols: single winding per unit -->
+  <g stroke="#000" stroke-width="2.2" fill="none">
+    <path d="M 300 375 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20"/>
+    <path d="M 460 375 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20"/>
+  </g>
+  <g font-size="16" text-anchor="middle" fill="#000">
+    <text x="300" y="492">UNIT 1</text>
+    <text x="460" y="492">UNIT 2</text>
+  </g>
+
+  <!-- resistance bracket -->
+  <g stroke="#000" stroke-width="1.4">
+    <line x1="300" y1="172" x2="460" y2="172"/>
+    <line x1="300" y1="172" x2="300" y2="184"/>
+    <line x1="460" y1="172" x2="460" y2="184"/>
+  </g>
+  <text x="380" y="160" font-size="18" text-anchor="middle" font-weight="bold" fill="#000">131 &#937; TOTAL (measured, j91 &#8220;FIG,1&#8221;)</text>
+
+  <g font-size="15" fill="#222">
+    <text x="60" y="536">Single cylindrical winding per unit, #30 Bondeze wire;</text>
+    <text x="60" y="556">turns matched to the Russell set (&#8220;CHECK WITH TILNEY</text>
+    <text x="60" y="576">FOR NO OF TURNS&#8221; &#8212; coil assembly LO 8308-122).</text>
+    <text x="60" y="604">Check: 24&#178; / 131 &#937; = 4.40 W = &#8220;4.4 WATTS&#8221; on Fig. 4.</text>
+  </g>
+
+  <!-- ================= RIGHT PANEL: RUSSELL ================= -->
+  <rect x="650" y="70" width="620" height="560" fill="none" stroke="#000" stroke-width="1.2"/>
+  <text x="960" y="102" font-size="19" text-anchor="middle" font-weight="bold" fill="#000">RUSSELL STEP-DIAMETER SET &#8212; LO 8308-11</text>
+
+  <g stroke="#000" stroke-width="2" fill="none">
+    <line x1="710" y1="210" x2="1240" y2="210"/>
+    <line x1="710" y1="620" x2="1240" y2="620"/>
+    <line x1="710" y1="210" x2="710" y2="398"/>
+    <line x1="710" y1="428" x2="710" y2="620"/>
+    <line x1="688" y1="404" x2="732" y2="404"/>
+    <line x1="698" y1="422" x2="722" y2="422" stroke-width="5"/>
+  </g>
+  <text x="676" y="410" font-size="18" fill="#000">+</text>
+  <text x="640" y="452" font-size="18" fill="#000">24 VDC</text>
+
+  <!-- UNIT 1 expanded: two parallel groups of three series sections -->
+  <g stroke="#000" stroke-width="2" fill="none">
+    <line x1="920" y1="210" x2="920" y2="250"/>
+    <line x1="870" y1="250" x2="970" y2="250"/>
+    <line x1="870" y1="250" x2="870" y2="282"/>
+    <line x1="970" y1="250" x2="970" y2="282"/>
+    <!-- group A: small, medium, large sections in series -->
+    <path d="M 870 282 a 6 6 0 0 1 0 12 a 6 6 0 0 1 0 12 a 6 6 0 0 1 0 12"/>
+    <line x1="870" y1="318" x2="870" y2="356"/>
+    <path d="M 870 356 a 8 8 0 0 1 0 16 a 8 8 0 0 1 0 16 a 8 8 0 0 1 0 16"/>
+    <line x1="870" y1="404" x2="870" y2="440"/>
+    <path d="M 870 440 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20"/>
+    <line x1="870" y1="500" x2="870" y2="540"/>
+    <!-- group B -->
+    <path d="M 970 282 a 6 6 0 0 1 0 12 a 6 6 0 0 1 0 12 a 6 6 0 0 1 0 12"/>
+    <line x1="970" y1="318" x2="970" y2="356"/>
+    <path d="M 970 356 a 8 8 0 0 1 0 16 a 8 8 0 0 1 0 16 a 8 8 0 0 1 0 16"/>
+    <line x1="970" y1="404" x2="970" y2="440"/>
+    <path d="M 970 440 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20"/>
+    <line x1="970" y1="500" x2="970" y2="540"/>
+    <line x1="870" y1="540" x2="970" y2="540"/>
+    <line x1="920" y1="540" x2="920" y2="620"/>
+  </g>
+  <g font-size="13.5" fill="#000">
+    <text x="884" y="304">SM &#183; 500 T</text>
+    <text x="884" y="382">MED &#183; 500 T</text>
+    <text x="884" y="474">LG &#183; 500 T</text>
+  </g>
+  <g font-size="14" fill="#000" text-anchor="middle">
+    <text x="806" y="398" transform="rotate(-90 806 398)">GROUP A &#8212; 3 IN SERIES</text>
+    <text x="1030" y="398" transform="rotate(90 1030 398)">GROUP B &#8212; 3 IN SERIES</text>
+  </g>
+  <text x="920" y="576" font-size="15.5" text-anchor="middle" fill="#000">UNIT 1 &#8212; 6 SECTIONS &#215; 500 TURNS</text>
+
+  <!-- UNIT 2 compact -->
+  <g stroke="#000" stroke-width="2" fill="none">
+    <line x1="1150" y1="210" x2="1150" y2="300"/>
+    <rect x="1108" y="300" width="84" height="240"/>
+    <line x1="1150" y1="540" x2="1150" y2="620"/>
+  </g>
+  <g font-size="15" text-anchor="middle" fill="#000">
+    <text x="1150" y="405">UNIT 2</text>
+    <text x="1150" y="427">(identical,</text>
+    <text x="1150" y="449">same 2&#215;3</text>
+    <text x="1150" y="471">grouping)</text>
+  </g>
+
+  <!-- resistance bracket -->
+  <g stroke="#000" stroke-width="1.4">
+    <line x1="920" y1="172" x2="1150" y2="172"/>
+    <line x1="920" y1="172" x2="920" y2="184"/>
+    <line x1="1150" y1="172" x2="1150" y2="184"/>
+  </g>
+  <text x="1035" y="160" font-size="18" text-anchor="middle" font-weight="bold" fill="#000">126 &#937; TOTAL (measured, j91 &#8220;FIG.2&#8221;)</text>
+
+  <text x="680" y="604" font-size="15" fill="#222">Check: 24&#178; / 126 &#937; = 4.57 W &#8776; reported 4.6 W (Russell unit, zero gap).</text>
+
+  <!-- ================= SOURCE NOTES ================= -->
+  <rect x="30" y="650" width="1240" height="200" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <g font-size="16" fill="#000">
+    <text x="50" y="680" font-weight="bold">Source notes &#8212; Fig. 2, &#8220;WIRING SCHEMATIC FOR RUSSELL SOLENOID&#8221; (j89 / PDF 92), verbatim:</text>
+    <text x="50" y="706">(1) &#8220;6 SECTIONS OF 500 TURNS EACH&#8221;&#160;&#160; (2) &#8220;DIVIDED INTO 2 GROUPS OF 3 SECTIONS.&#8221;</text>
+    <text x="50" y="730">(3) &#8220;THE 3 SECTIONS WITHIN A GROUP ARE WIRED IN SERIES.&#8221;&#160;&#160; (4) &#8220;THE 2 GROUPS ARE WIRED PARALLEL TO EACH OTHER.&#8221;</text>
+    <text x="50" y="758" fill="#222">&#8220;ELECTRICAL POWER INPUT&#8221; = 24 VDC supply; the Fig. 4 &#8220;TEST SETUP&#8221; inset adds a voltmeter (V) and ammeter (I) in circuit.</text>
+    <text x="50" y="784" fill="#222">Resistance totals from the unnumbered sheet j91 / PDF 94: 131 &#937; bracketing the two round-drawn coils (&#8220;FIG,1&#8221;), 126 &#937; the two</text>
+    <text x="50" y="806" fill="#222">step-drawn coils (&#8220;FIG.2&#8221;). That page does not name the coil types; assignment is by the drawn shapes [flagged in source notes].</text>
+    <text x="50" y="832" fill="#222">SM / MED / LG = the three winding sizes of LO 8308-107 / -108 / -109 (wound to 1.80 / 2.06 / 2.25 DIA). Grouping 3+3 by hemisphere is the natural reading [INFERENCE].</text>
+  </g>
+</svg>

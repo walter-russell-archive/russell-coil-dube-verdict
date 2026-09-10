@@ -1,0 +1,39 @@
+# License and Provenance Notice
+
+## Original work — CC BY 4.0
+
+The following materials are original to this project and are licensed under the
+Creative Commons Attribution 4.0 International License
+(https://creativecommons.org/licenses/by/4.0/):
+
+- essay/the-dube-verdict.md
+- README.md
+- The transcription formatting, page concordances, INDEX files, and editorial
+  "Notes" sections in transcripts/
+- transcripts/v5n1_drawings_description.md (the descriptions, not the described
+  drawings)
+- All SVG files and the README in schematics/
+- verification/maguire-dube-verification.md
+
+Attribution: cite this repository.
+
+## Reproduced historical material — copyright as-is
+
+This repository reproduces, for scholarship and preservation:
+
+1. Correspondence and an engineering report from 1958 (John E. Dube / Alco Valve
+   Company; Walter and Lao Russell), as reprinted in *Fulcrum: The Science Journal
+   of the University of Science and Philosophy*, Vol. 4 No. 3 (October 1996) and
+   Vol. 5 No. 1 (May 1997).
+2. Page scans of those two *Fulcrum* issues (sources/), recovered from Internet
+   Archive Wayback captures of philosophy.org (capture 20240922235101).
+
+The University of Science and Philosophy (USP) published *Fulcrum* and distributed
+all 21 issues as free downloadable PDFs on its own website for years, with the
+stated editorial purpose of setting the historical record straight and assisting
+researchers. This project republishes the two issues relevant to the 1958 coil test
+in that same spirit, with full attribution, and claims no copyright over them.
+
+No license is granted or implied for the reproduced historical material beyond
+what its own status allows. Copyright holders with concerns may open an issue in
+this repository.

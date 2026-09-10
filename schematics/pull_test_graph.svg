@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="Helvetica, Arial, sans-serif">
+  <title>Fig. 4 redrawn: comparative pull test of standard and step-diameter coils</title>
+  <rect width="1200" height="900" fill="#ffffff"/>
+
+  <!-- chart title -->
+  <text x="560" y="46" font-size="24" text-anchor="middle" fill="#000">FIG. 4 (REDRAWN) &#8212; PULL vs. GAP, TWO-UNIT COIL SETS AT 24 VDC</text>
+
+  <!-- minor grid: verticals every .002 in (45 px), horizontals every 0.5 lb (63.6 px) -->
+  <g stroke="#cccccc" stroke-width="1">
+    <line x1="155" y1="80" x2="155" y2="780"/><line x1="200" y1="80" x2="200" y2="780"/>
+    <line x1="245" y1="80" x2="245" y2="780"/><line x1="290" y1="80" x2="290" y2="780"/>
+    <line x1="380" y1="80" x2="380" y2="780"/><line x1="425" y1="80" x2="425" y2="780"/>
+    <line x1="470" y1="80" x2="470" y2="780"/><line x1="515" y1="80" x2="515" y2="780"/>
+    <line x1="605" y1="80" x2="605" y2="780"/><line x1="650" y1="80" x2="650" y2="780"/>
+    <line x1="695" y1="80" x2="695" y2="780"/><line x1="740" y1="80" x2="740" y2="780"/>
+    <line x1="830" y1="80" x2="830" y2="780"/><line x1="875" y1="80" x2="875" y2="780"/>
+    <line x1="920" y1="80" x2="920" y2="780"/><line x1="965" y1="80" x2="965" y2="780"/>
+    <line x1="110" y1="716.4" x2="1010" y2="716.4"/><line x1="110" y1="589.1" x2="1010" y2="589.1"/>
+    <line x1="110" y1="461.8" x2="1010" y2="461.8"/><line x1="110" y1="334.5" x2="1010" y2="334.5"/>
+    <line x1="110" y1="207.3" x2="1010" y2="207.3"/><line x1="110" y1="80" x2="1010" y2="80"/>
+  </g>
+  <!-- major grid: every .010 in and 1 lb -->
+  <g stroke="#888888" stroke-width="1.2">
+    <line x1="335" y1="80" x2="335" y2="780"/><line x1="560" y1="80" x2="560" y2="780"/>
+    <line x1="785" y1="80" x2="785" y2="780"/><line x1="1010" y1="80" x2="1010" y2="780"/>
+    <line x1="110" y1="652.7" x2="1010" y2="652.7"/><line x1="110" y1="525.5" x2="1010" y2="525.5"/>
+    <line x1="110" y1="398.2" x2="1010" y2="398.2"/><line x1="110" y1="270.9" x2="1010" y2="270.9"/>
+    <line x1="110" y1="143.6" x2="1010" y2="143.6"/>
+  </g>
+
+  <!-- axes -->
+  <g stroke="#000000" stroke-width="2.5" fill="none">
+    <line x1="110" y1="80" x2="110" y2="780"/>
+    <line x1="110" y1="780" x2="1010" y2="780"/>
+  </g>
+
+  <!-- axis tick labels -->
+  <g font-size="19" fill="#000" text-anchor="middle">
+    <text x="110" y="806">0</text>
+    <text x="335" y="806">.010</text>
+    <text x="560" y="806">.020</text>
+    <text x="785" y="806">.030</text>
+    <text x="1010" y="806">.040</text>
+    <text x="560" y="845" font-size="21">GAP (INCHES)</text>
+  </g>
+  <!-- minor labels at the two intermediate plotted gaps -->
+  <g font-size="14" fill="#444" text-anchor="middle">
+    <line x1="427.2" y1="780" x2="427.2" y2="790" stroke="#444" stroke-width="1.5"/>
+    <text x="427.2" y="824">(.014)</text>
+    <line x1="740" y1="780" x2="740" y2="790" stroke="#444" stroke-width="1.5"/>
+    <text x="740" y="824">(.028)</text>
+  </g>
+  <g font-size="19" fill="#000" text-anchor="end">
+    <text x="98" y="787">0</text>
+    <text x="98" y="659.7">1</text>
+    <text x="98" y="532.5">2</text>
+    <text x="98" y="405.2">3</text>
+    <text x="98" y="277.9">4</text>
+    <text x="98" y="150.6">5</text>
+  </g>
+  <text x="40" y="430" font-size="21" fill="#000" text-anchor="middle" transform="rotate(-90 40 430)">PULL (LBS)</text>
+
+  <!-- STANDARD COILS curve (solid, round markers, as in source) -->
+  <path d="M 110.0 132.2 C 147.5 175.7 282.1 340.7 335.0 393.1 C 387.9 445.5 389.8 428.1 427.2 446.6 C 464.8 465.0 507.9 484.7 560.0 503.8 C 612.1 522.9 665.0 543.1 740.0 561.1 C 815.0 579.1 965.0 603.5 1010.0 612.0"
+        fill="none" stroke="#000000" stroke-width="2.8"/>
+  <g fill="#000000" stroke="none">
+    <circle cx="110" cy="132.2" r="6"/>
+    <circle cx="427.2" cy="446.6" r="6"/>
+    <circle cx="740" cy="561.1" r="6"/>
+    <circle cx="1010" cy="612" r="6"/>
+  </g>
+
+  <!-- STEP DIAMETER COILS curve (dashed, x markers, as in source) -->
+  <path d="M 110.0 169.1 C 147.5 211.7 282.1 373.6 335.0 424.9 C 387.9 476.2 389.8 458.9 427.2 477.1 C 464.8 495.3 507.9 516.1 560.0 534.4 C 612.1 552.6 665.0 571.3 740.0 586.5 C 815.0 601.8 965.0 619.4 1010.0 626.0"
+        fill="none" stroke="#000000" stroke-width="2.2" stroke-dasharray="9 6"/>
+  <g stroke="#000000" stroke-width="2.8">
+    <line x1="102" y1="161.1" x2="118" y2="177.1"/><line x1="102" y1="177.1" x2="118" y2="161.1"/>
+    <line x1="419.2" y1="469.1" x2="435.2" y2="485.1"/><line x1="419.2" y1="485.1" x2="435.2" y2="469.1"/>
+    <line x1="732" y1="578.5" x2="748" y2="594.5"/><line x1="732" y1="594.5" x2="748" y2="578.5"/>
+    <line x1="1002" y1="618" x2="1018" y2="634"/><line x1="1002" y1="634" x2="1018" y2="618"/>
+  </g>
+
+  <!-- curve labels with leaders -->
+  <g font-size="19" fill="#000">
+    <text x="475" y="415">STANDARD COILS (LO 8308-12)</text>
+    <line x1="470" y1="421" x2="440" y2="450" stroke="#000" stroke-width="1.3"/>
+    <text x="545" y="660">STEP DIAMETER COILS (LO 8308-11)</text>
+    <line x1="540" y1="653" x2="510" y2="524" stroke="#000" stroke-width="1.3"/>
+  </g>
+
+  <!-- caption box -->
+  <g>
+    <rect x="510" y="95" width="490" height="225" fill="#ffffff" stroke="#000" stroke-width="1.5"/>
+    <g font-size="16.5" fill="#000">
+      <text x="525" y="122" font-size="18" font-weight="bold">COMPARATIVE PULL TEST OF STANDARD &amp;</text>
+      <text x="525" y="143" font-size="18" font-weight="bold">STEP DIAMETER COILS (source header)</text>
+      <text x="525" y="170">VOLTAGE = 24 VDC &#160;&#183;&#160; WATTAGE = 4.4 WATTS</text>
+      <text x="525" y="192">Report values at zero gap: 4.4 W standard /</text>
+      <text x="525" y="212">4.6 W step-diameter (= 24&#178;/131 &#937;, 24&#178;/126 &#937;)</text>
+      <text x="525" y="237">Sheet date &#8220;17 NOV '58&#8221; [?] &#183; initials &#8220;JSY&#8221; [?]</text>
+      <text x="525" y="266" font-size="15" fill="#333">&#9679; / &#215; = points plotted in the source graph (8 total,</text>
+      <text x="525" y="285" font-size="15" fill="#333">read to &#177;.0005 in, &#177;0.05 lb); curves between points</text>
+      <text x="525" y="304" font-size="15" fill="#333">interpolated through curve samples at .010 and .020.</text>
+    </g>
+  </g>
+
+  <!-- provenance -->
+  <text x="110" y="878" font-size="15" fill="#333">Redrawn from Fulcrum Vol. 5 No. 1 (May 1997), journal p. 92 / PDF p. 95 (300 dpi render), Alco Valve Co. test of Nov 1958.</text>
+</svg>

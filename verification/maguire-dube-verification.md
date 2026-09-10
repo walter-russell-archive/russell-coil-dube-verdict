@@ -1,0 +1,11 @@
+Historical verification for the two figures in the 1958 Russell coil test.
+
+VERIFIED: Russell Maguire (1897–1966) was a real industrialist/financier resident in Greenwich, Conn., owner of Auto-Ordnance (Thompson submachine gun) and owner/publisher of The American Mercury 1952–1961 — the identification in the Nov 24 1958 letter is almost certainly him. The Library of Congress Name Authority File carries him as record n97085811, "Maguire, Russell, 1897-1966" (id.loc.gov).
+
+VERIFIED: Alco Valve Company, St. Louis (University City/Maplewood, Mo.), founded 1925, acquired by Emerson Electric 1967 → Alco Controls → Emerson Climate Technologies Flow Controls (2003) → Copeland (2023–24 Blackstone).
+
+VERIFIED: John E. Dube (1905–1983) was a real Alco Valve engineer, was president of Alco Valve Company, and was ASHRAE national president 1964–65 (ASHRAE Presidential Members Gallery). A Google Patents search for "john e dube" with assignee "alco valve" returns 21 results, filed 1941–1960 and granted 1946–1964. Some of the 21 name Dube only in the body text of other inventors' patents, so the true inventor count is lower — hence the hedged "~15–21". A HathiTrust full-text phrase search for the exact string "John E. Dube, president" returns Refrigeration Engineering v.66 (1958), which independently corroborates his title in the very year of the test.
+
+NEGATIVE: no source independent of Fulcrum documents any Maguire–Walter Russell / USP / Swannanoa funding relationship, and no archival trace of the 1958 coil test or drawings L08308-11/12 exists outside Fulcrum v4n3 and its Scribd re-uploads.
+
+NORAD ACCOUNT: the story that the Russells met "General Chapman, Colonel Fry, Major Sargent, Major Cripe, and others from NORAD" in the fall of 1959, and reported to their NORAD contacts on September 10, 1961 that the coils had worked, is proponent-sourced. It appears on USP's own Optic Dynamo-Generator page and in the Grotz, Binder & Kovac paper at the 1992 IECEC. The entire citation chain roots in a single place: reference 12 of that IECEC paper, "Documents, letters, etc. from the Archives, University of Science and Philosophy." No independent NORAD, USAF, or other government record attests any part of it.
