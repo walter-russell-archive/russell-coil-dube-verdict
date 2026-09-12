@@ -15,7 +15,7 @@ text where readers and search engines can reach it.
 
 ## Read it
 
-**Web:** https://walterrussellarchive.org — the essay typeset, every document beside
+**Web:** https://dube.walterrussellarchive.org — the essay typeset, every document beside
 its page scan, the drawings, and the provenance chain.
 
 **In this repository:** [essay/the-dube-verdict.md](essay/the-dube-verdict.md) — the full

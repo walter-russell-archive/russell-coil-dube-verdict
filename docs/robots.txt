@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://walterrussellarchive.org/sitemap.xml
+Sitemap: https://dube.walterrussellarchive.org/sitemap.xml

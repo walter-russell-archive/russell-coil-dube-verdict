@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://walterrussellarchive.org/</loc></url>
-  <url><loc>https://walterrussellarchive.org/evidence.html</loc></url>
-  <url><loc>https://walterrussellarchive.org/schematics.html</loc></url>
-  <url><loc>https://walterrussellarchive.org/provenance.html</loc></url>
+  <url><loc>https://dube.walterrussellarchive.org/</loc></url>
+  <url><loc>https://dube.walterrussellarchive.org/evidence.html</loc></url>
+  <url><loc>https://dube.walterrussellarchive.org/schematics.html</loc></url>
+  <url><loc>https://dube.walterrussellarchive.org/provenance.html</loc></url>
 </urlset>

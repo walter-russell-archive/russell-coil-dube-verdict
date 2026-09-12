@@ -3,7 +3,7 @@
 
     python3 tools/build_site.py                 # full build
     python3 tools/build_site.py --skip-images   # HTML only (scans already built)
-    python3 tools/build_site.py --base https://walterrussellarchive.org
+    python3 tools/build_site.py --base https://dube.walterrussellarchive.org
 
 The Markdown in essay/, transcripts/, schematics/ and verification/ stays the
 single source of truth. docs/ is generated output: never hand-edit it.
@@ -32,7 +32,7 @@ REPO = "https://github.com/walter-russell-archive/russell-coil-dube-verdict"
 BLOB = REPO + "/blob/main"
 RAW = "https://raw.githubusercontent.com/walter-russell-archive/russell-coil-dube-verdict/main"
 IA_ITEM = "https://archive.org/details/fulcrum-science-journal-usp-1992-1998"
-DEFAULT_BASE = "https://walterrussellarchive.org"
+DEFAULT_BASE = "https://dube.walterrussellarchive.org"
 CONTACT = "contact@walterrussellarchive.org"
 
 PDFS = {
