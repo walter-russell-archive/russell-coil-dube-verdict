@@ -34,6 +34,10 @@ RAW = "https://raw.githubusercontent.com/walter-russell-archive/russell-coil-dub
 IA_ITEM = "https://archive.org/details/fulcrum-science-journal-usp-1992-1998"
 DEFAULT_BASE = "https://dube.walterrussellarchive.org"
 CONTACT = "contact@walterrussellarchive.org"
+# IndexNow ownership key. The same key serves every host of the archive, and
+# each host proves ownership by publishing it at its own root.
+INDEXNOW_KEY = "bc3af5b0a09ce2ede0e71eea8af3cf1c"
+ARCHIVE = "https://walterrussellarchive.org"
 
 PDFS = {
     "v4n3": "fulcrum_v4n3_october_1996.pdf",
@@ -491,7 +495,8 @@ def page(
 <footer class="site">
   <div class="footer-inner">
     <p>Primary sources for the 1958 Alco Valve test of the Russell coil. Transcripts are verbatim.
-       Uncertain readings carry their uncertainty.</p>
+       Uncertain readings carry their uncertainty. This site is one project of the
+       <a href="{ARCHIVE}" rel="noopener">Walter Russell Archive</a>.</p>
     <p>Original work (essay, transcription formatting, editorial notes, schematics) is licensed
        <a href="{BLOB}/LICENSE" rel="noopener">CC BY 4.0</a>. The reproduced historical documents
        and scans keep their own copyright status.</p>
@@ -1293,6 +1298,9 @@ def main() -> int:
         f"{urls}</urlset>\n",
     )
     write(OUT / "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n")
+    # IndexNow ownership key, shared by every host of the archive. Hosting the
+    # file at the site root is what authorizes URL submissions for this host.
+    write(OUT / f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY + "\n")
 
     for name in ("index.html", "evidence.html", "schematics.html", "provenance.html", "404.html"):
         size = (OUT / name).stat().st_size
